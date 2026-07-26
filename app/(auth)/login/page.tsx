@@ -1,6 +1,6 @@
-import ShipNowLogo from "../components/ShipNowLogo";
-import LoginForm from "../components/auth/LoginForm";
-import HeroPanel from "../components/hero/HeroPanel";
+import ShipNowLogo from "../../components/ShipNowLogo";
+import LoginForm from "../../components/auth/LoginForm";
+import HeroPanel from "../../components/hero/HeroPanel";
 
 export default function LoginPage() {
   return (
