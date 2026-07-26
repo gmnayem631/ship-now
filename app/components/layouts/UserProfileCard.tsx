@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 
 const UserProfileCard = () => {
   return (
-    <div className="group mt-3 flex w-full items-center gap-3 rounded-lg border border-transparent bg-[#f0f0f0] p-2">
+    <div className="group flex w-full items-center gap-3 rounded-lg border border-transparent bg-[#f0f0f0] p-2">
       {/* Avatar Image */}
       <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
         <Image

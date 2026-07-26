@@ -1,17 +1,33 @@
 import ShipNowLogo from "../ShipNowLogo";
 import UserProfileCard from "./UserProfileCard";
-
+import SidebarNav from "./SidebarNav";
+import SidebarPromo from "./SidebarPromo";
 const Sidebar = () => {
   return (
-    <div className="h-screen w-55.75 bg-[#fefefe] px-4 py-5 text-center font-bold text-black">
-      <div className="flex items-center gap-2 text-xl font-black text-[#333] italic">
+    <aside className="sticky top-0 flex h-screen w-[222px] flex-col border-r border-gray-100 bg-white px-4 py-5">
+      {/* Logo */}
+      <div className="flex items-center gap-2.5">
         <ShipNowLogo />
-        <span className="uppercase">ShipNow</span>
+        <span className="text-lg font-black tracking-tight text-[#333] uppercase">
+          ShipNow
+        </span>
       </div>
 
       {/* User */}
-      <UserProfileCard />
-    </div>
+      <div className="mt-5">
+        <UserProfileCard />
+      </div>
+
+      {/* Navigation - make it scrollable if needed */}
+      <div className="flex-1 overflow-y-auto">
+        <SidebarNav />
+      </div>
+
+      {/* Promo Card */}
+      <div className="mt-4">
+        <SidebarPromo />
+      </div>
+    </aside>
   );
 };
 

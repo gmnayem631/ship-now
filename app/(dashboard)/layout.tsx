@@ -1,16 +1,13 @@
-import React from "react";
-import Footer from "../components/layouts/Footer";
+import { ReactNode } from "react";
 import Sidebar from "../components/layouts/Sidebar";
 
-// app/(dashboard)/layout.tsx
-export default function DashboardLayout({ children }) {
+export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-[#FEFEFE]">
       <Sidebar />
       <div className="flex flex-1 flex-col">
-        {/* Top header will go here later */}
         <main className="flex-1 p-6">{children}</main>
-        <Footer />
+        {/* Footer will go here later */}
       </div>
     </div>
   );
