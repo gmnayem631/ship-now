@@ -1,7 +1,11 @@
+import Sidebar from "./components/ui/Sidebar";
+
 export default function Home() {
   return (
     <>
-      <div className="">ShipNow Logistics Dashboard</div>
+      <div className="">
+        <Sidebar />
+      </div>
     </>
   );
 }

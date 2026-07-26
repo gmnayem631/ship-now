@@ -1,4 +1,4 @@
-import LoginLogoContent from "../Logo";
+import LoginLogoContent from "../LoginLogoContent";
 import HeroImages from "./HeroImages";
 
 const HeroPanel = () => {
