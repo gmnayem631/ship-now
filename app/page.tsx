@@ -1,9 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col flex-1 items-center justify-center">
-        ShipNow Logistics Dashboard
-      </div>
+      <div className="">ShipNow Logistics Dashboard</div>
     </>
   );
 }
