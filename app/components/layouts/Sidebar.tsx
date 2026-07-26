@@ -4,7 +4,7 @@ import SidebarNav from "./SidebarNav";
 import SidebarPromo from "./SidebarPromo";
 const Sidebar = () => {
   return (
-    <aside className="sticky top-0 flex h-screen w-[222px] flex-col border-r border-gray-100 bg-white px-4 py-5">
+    <aside className="sticky top-0 flex h-screen w-55.75 flex-col border-r border-gray-100 bg-white px-4 py-5">
       {/* Logo */}
       <div className="flex items-center gap-2.5">
         <ShipNowLogo />

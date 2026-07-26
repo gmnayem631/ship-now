@@ -7,7 +7,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
       <Sidebar />
       <div className="flex flex-1 flex-col">
         <main className="flex-1 p-6">{children}</main>
-        {/* Footer will go here later */}
+        {/* Footer */}
       </div>
     </div>
   );

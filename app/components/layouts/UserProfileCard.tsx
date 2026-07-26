@@ -11,6 +11,7 @@ const UserProfileCard = () => {
           alt="John Doe"
           fill
           className="object-cover"
+          sizes="56px"
         />
       </div>
 
