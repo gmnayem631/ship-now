@@ -28,7 +28,7 @@ const LoginLogoContent = () => {
         />
       </svg>
 
-      <span className="text-4xl uppercase font-black text-white tracking-tight">
+      <span className="text-2xl md:text-4xl uppercase font-black text-white tracking-tight">
         ShipNow
       </span>
     </div>

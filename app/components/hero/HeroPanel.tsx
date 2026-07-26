@@ -1,26 +1,25 @@
-// components/hero/HeroPanel.tsx
 import LoginLogoContent from "../Logo";
 import HeroImages from "./HeroImages";
 
 const HeroPanel = () => {
   return (
-    <div className="lg:flex lg:w-1/2 flex-col justify-between bg-[#856DF3] px-12 py-12 relative overflow-hidden">
-      {/* Logo - top left */}
-      <div className="relative z-10">
+    <div className="relative flex w-full flex-col items-center bg-[#856DF3] px-6 py-10 lg:w-1/2 lg:justify-between lg:px-12 lg:py-12">
+      {/* Logo */}
+      <div className="mb-8 lg:mb-0">
         <LoginLogoContent />
       </div>
 
-      {/* Images - centered vertically */}
-      <div className="relative z-10 flex flex-1 items-center justify-center">
+      {/* Images */}
+      <div className="mb-8 w-full max-w-85 lg:mb-0 lg:flex-1 lg:flex lg:items-center lg:justify-center">
         <HeroImages />
       </div>
 
       {/* Bottom text */}
-      <div className=" text-center">
-        <h1 className="text-[40px] font-extrabold leading-tight text-white">
+      <div className="text-center lg:text-left px-3">
+        <h1 className="text-2xl md:text-3xl font-extrabold leading-tight text-[#fefefe] sm:text-[36px] lg:text-[40px]">
           Welcome to ShipNow
         </h1>
-        <p className="mt-3 text-base text-white/90">
+        <p className="mt-3 text-sm text-[#fefefe] sm:text-base">
           Manage your shipments, fleet, and warehouse in one smart dashboard.
         </p>
       </div>
