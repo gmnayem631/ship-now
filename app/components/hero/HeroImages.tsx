@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const HeroImages = () => {
   return (
-    <div className="relative mx-auto h-85 w-75">
-      <div className="absolute left-0 top-8 h-70 w-60 overflow-hidden rounded-2xl shadow-2xl">
+    <div className="relative mr-28 h-85 w-75 mb-16">
+      <div className="absolute left-0 top-8 h-96.5 w-102.5 overflow-hidden rounded-xl">
         <Image
           src="/images/delivery-truck.png"
           alt="Delivery truck"
@@ -12,7 +12,7 @@ const HeroImages = () => {
           priority
         />
       </div>
-      <div className="absolute -right-4 top-0 h-40 w-35 overflow-hidden rounded-xl shadow-xl">
+      <div className="absolute -right-38 -top-6 h-57 w-44.5 overflow-hidden rounded-lg">
         <Image
           src="/images/customer-phone.png"
           alt="Customer with phone"
