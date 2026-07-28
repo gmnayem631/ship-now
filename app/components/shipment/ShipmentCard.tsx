@@ -1,24 +1,15 @@
 import { Shipment } from "@/app/data/shipmentsData";
-import {
-  Truck,
-  Package,
-  Shirt,
-  Home,
-  Dumbbell,
-  Car,
-  Leaf,
-  ShoppingBag,
-} from "lucide-react";
+import { Truck, Package, Shirt, Home, Dumbbell, Car, Leaf } from "lucide-react";
 import { getCompanyLogo } from "./getCompanyLogo";
+import DestinationIcon from "./DestinationIcon";
 
 const statusStyles: Record<string, string> = {
-  "In Transit": "bg-blue-100 text-blue-700",
-  "Out for Delivery": "bg-orange-100 text-orange-700",
-  Delivered: "bg-green-100 text-green-700",
-  Processing: "bg-yellow-100 text-yellow-700",
+  "In Transit": "bg-[#E3DDFF]",
+  "Out for Delivery": "bg-[#E0E0E0]",
+  Delivered: "bg-[#D9F9E7]",
+  Processing: "bg-[#FEF1A7]",
 };
 
-// Choose icon based on category
 const getCategoryIcon = (category: string) => {
   const cat = category.toLowerCase();
 
@@ -30,7 +21,7 @@ const getCategoryIcon = (category: string) => {
   if (cat.includes("auto")) return Car;
   if (cat.includes("food") || cat.includes("beverage")) return Leaf;
 
-  return Truck; // default
+  return Truck;
 };
 
 const ShipmentCard = ({ shipment }: { shipment: Shipment }) => {
@@ -43,7 +34,7 @@ const ShipmentCard = ({ shipment }: { shipment: Shipment }) => {
         <div>
           <p className="text-sm font-semibold text-[#333]">#{shipment.id}</p>
           <span
-            className={`mt-1 inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${
+            className={`text-[#333 font-semibold] mt-1 inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${
               statusStyles[shipment.status]
             }`}
           >
@@ -51,18 +42,17 @@ const ShipmentCard = ({ shipment }: { shipment: Shipment }) => {
           </span>
         </div>
 
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gray-50">
-          <Icon size={18} className="text-gray-500" />
+        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#E0E0E0]">
+          <Icon size={24} className="text-gray-500" />
         </div>
       </div>
 
-      {/* Company */}
       {/* Company */}
       <div className="mb-4 flex items-center gap-3">
         {/* Logo */}
         <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg bg-gray-50">
           {getCompanyLogo(shipment.company) || (
-            <span className="text-xs font-bold text-gray-400">
+            <span className="bg-[#E3DDFF] text-xs font-bold text-gray-400">
               {shipment.company.charAt(0)}
             </span>
           )}
@@ -85,7 +75,9 @@ const ShipmentCard = ({ shipment }: { shipment: Shipment }) => {
           </div>
         </div>
         <div className="flex items-start gap-2">
-          <span className="mt-1.5 h-2 w-2 rounded-full bg-gray-300" />
+          <div className="rounded-full bg-[#E3DDFF] p-1.5">
+            <DestinationIcon />
+          </div>
           <div>
             <p className="text-gray-500">Destination</p>
             <p className="font-medium text-[#333]">{shipment.destination}</p>
@@ -97,8 +89,14 @@ const ShipmentCard = ({ shipment }: { shipment: Shipment }) => {
       {/* Progress */}
       <div className="mb-3">
         <div className="mb-1 flex justify-between text-xs">
-          <span className="text-gray-500">Progress</span>
-          <span className="font-medium text-[#333]">{shipment.progress}%</span>
+          <div className="flex items-center gap-2">
+            <span className="text-gray-500">Progress</span>
+            <span className="font-bold text-[#333]">{shipment.progress}%</span>
+          </div>
+          <p className="text-sm text-gray-500">
+            Carrier:{" "}
+            <span className="font-medium text-[#333]">{shipment.carrier}</span>
+          </p>
         </div>
         <div className="h-2 overflow-hidden rounded-full bg-gray-100">
           <div
@@ -107,12 +105,6 @@ const ShipmentCard = ({ shipment }: { shipment: Shipment }) => {
           />
         </div>
       </div>
-
-      {/* Carrier */}
-      <p className="text-sm text-gray-500">
-        Carrier:{" "}
-        <span className="font-medium text-[#333]">{shipment.carrier}</span>
-      </p>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-const QuickParts = () => {
+const QuickTools = () => {
   return (
     <svg
       width="36"
@@ -32,4 +32,4 @@ const QuickParts = () => {
   );
 };
 
-export default QuickParts;
+export default QuickTools;

@@ -114,7 +114,7 @@ export const shipments: Shipment[] = [
   {
     id: "SH9001873",
     status: "Processing",
-    company: "SunCare Panels",
+    company: "SunCore Panels",
     category: "Electronics",
     origin: "San Diego, CA",
     destination: "Reno, NV",
