@@ -112,7 +112,7 @@ const ProfitSummary = () => {
             bottom: 5,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid vertical={false} />
           <XAxis dataKey={"month"} />
           <YAxis
             width={"auto"}

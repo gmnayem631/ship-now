@@ -1,6 +1,8 @@
 "use client";
 
 import DashboardHeader from "../components/dashboard/DashboardHeader";
+import LiveTracking from "../components/dashboard/LiveTracking";
+import ProductCategories from "../components/dashboard/ProductCategories";
 import ProfitSummary from "../components/dashboard/ProfitSummary";
 import ShipmentStatistic from "../components/dashboard/ShipmentStatistic";
 import StatCard from "../components/dashboard/StatCard";
@@ -20,6 +22,14 @@ export default function DashboardPage() {
             </div>
             <div className="col-span-1">
               <ProfitSummary />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-5">
+            <div className="col-span-1">
+              <ProductCategories />
+            </div>
+            <div className="col-span-1">
+              <LiveTracking />
             </div>
           </div>
         </div>
