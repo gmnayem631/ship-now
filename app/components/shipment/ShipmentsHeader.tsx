@@ -10,7 +10,19 @@ const statusTabs = [
   "Out for Delivery",
 ];
 
-const ShipmentsHeader = () => {
+interface ShipmentsHeaderProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+}
+
+const ShipmentsHeader = ({
+  activeTab,
+  setActiveTab,
+  searchQuery,
+  setSearchQuery,
+}: ShipmentsHeaderProps) => {
   return (
     <div className="space-y-5">
       {/* Title + Add button */}
@@ -32,8 +44,9 @@ const ShipmentsHeader = () => {
           {statusTabs.map((tab) => (
             <button
               key={tab}
+              onClick={() => setActiveTab(tab)}
               className={`rounded-lg px-4 py-2 text-sm font-medium transition ${
-                tab === "All"
+                tab === activeTab
                   ? "bg-[#333] text-white"
                   : "text-gray-600 hover:bg-gray-100"
               }`}
@@ -53,6 +66,8 @@ const ShipmentsHeader = () => {
             />
             <input
               type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search Shipment"
               className="h-10 w-full rounded-lg border border-gray-200 bg-white pr-4 pl-10 text-sm outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20 sm:w-64"
             />
