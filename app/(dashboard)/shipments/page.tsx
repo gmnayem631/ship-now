@@ -1,9 +1,10 @@
 import ShipmentsGrid from "@/app/components/shipment/ShipmentsGrid";
+import ShipmentsHeader from "@/app/components/shipment/ShipmentsHeader";
 
 export default function ShipmentsPage() {
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold text-[#333]">Shipments</h1>
+      <ShipmentsHeader />
       <ShipmentsGrid />
     </div>
   );
