@@ -1,11 +1,13 @@
 "use client";
 
 import DashboardHeader from "../components/dashboard/DashboardHeader";
+import StatCard from "../components/dashboard/StatCard";
+import ShipmentStatistic from "../components/dashboard/ShipmentStatistic";
+import ProfitSummary from "../components/dashboard/ProfitSummary";
 
 import ProductCategories from "../components/dashboard/ProductCategories";
-import ProfitSummary from "../components/dashboard/ProfitSummary";
-import ShipmentStatistic from "../components/dashboard/ShipmentStatistic";
-import StatCard from "../components/dashboard/StatCard";
+
+import RecentShipments from "../components/dashboard/RecentShipments";
 import Tracking from "../components/dashboard/Tracking";
 
 export default function DashboardPage() {
@@ -14,26 +16,29 @@ export default function DashboardPage() {
       <DashboardHeader />
 
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-4">
-        {/* left column - col-span-3 */}
+        {/* Left / main column */}
         <div className="space-y-6 xl:col-span-3">
           <StatCard />
-          <div className="grid grid-cols-2 gap-5">
-            <div className="col-span-1">
-              <ShipmentStatistic />
-            </div>
-            <div className="col-span-1">
-              <ProfitSummary />
-            </div>
+
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+            <ShipmentStatistic />
+            <ProfitSummary />
           </div>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="col-span-1">
+
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+            <div className="lg:col-span-1">
               <ProductCategories />
             </div>
-            <div className="col-span-1">
+            <div className="lg:col-span-1">
               <Tracking />
             </div>
           </div>
+
+          <RecentShipments />
         </div>
+
+        {/* Right column */}
+        <div className="space-y-6 xl:col-span-1"></div>
       </div>
     </div>
   );
