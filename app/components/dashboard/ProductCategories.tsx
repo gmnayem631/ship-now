@@ -9,7 +9,7 @@ export default function ProductCategories() {
   }, 0);
 
   return (
-    <div className="rounded-2xl border border-gray-100/50 bg-white p-6 shadow-sm">
+    <div className="h-full rounded-2xl border border-gray-100/50 bg-white p-6 shadow-sm">
       {/* Header */}
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold text-[#1A1A1A]">

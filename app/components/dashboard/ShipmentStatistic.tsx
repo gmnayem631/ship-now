@@ -97,7 +97,7 @@ export default function ShipmentStatisticChart() {
 
       {/* Metric & Badge */}
       <div className="mb-6 flex items-center gap-3">
-        <span className="text-4xl font-bold tracking-tight text-gray-900">
+        <span className="text-3xl font-bold tracking-tight text-[#333]">
           4,352
         </span>
         <span className="inline-flex items-center gap-0.5 rounded-full bg-emerald-100/70 px-2.5 py-1 text-xs font-semibold text-emerald-600">
