@@ -1,7 +1,10 @@
-import React from "react";
+import ShipmentsGrid from "@/app/components/shipment/ShipmentsGrid";
 
-const Shipments = () => {
-  return <div>Shipments</div>;
-};
-
-export default Shipments;
+export default function ShipmentsPage() {
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-bold text-[#333]">Shipments</h1>
+      <ShipmentsGrid />
+    </div>
+  );
+}
