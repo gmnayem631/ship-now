@@ -9,6 +9,7 @@ import {
   Leaf,
   ShoppingBag,
 } from "lucide-react";
+import { getCompanyLogo } from "./getCompanyLogo";
 
 const statusStyles: Record<string, string> = {
   "In Transit": "bg-blue-100 text-blue-700",
@@ -56,9 +57,21 @@ const ShipmentCard = ({ shipment }: { shipment: Shipment }) => {
       </div>
 
       {/* Company */}
-      <div className="mb-4">
-        <p className="font-semibold text-[#333]">{shipment.company}</p>
-        <p className="text-sm text-gray-500">{shipment.category}</p>
+      {/* Company */}
+      <div className="mb-4 flex items-center gap-3">
+        {/* Logo */}
+        <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg bg-gray-50">
+          {getCompanyLogo(shipment.company) || (
+            <span className="text-xs font-bold text-gray-400">
+              {shipment.company.charAt(0)}
+            </span>
+          )}
+        </div>
+
+        <div>
+          <p className="font-semibold text-[#333]">{shipment.company}</p>
+          <p className="text-sm text-gray-500">{shipment.category}</p>
+        </div>
       </div>
 
       {/* Route */}

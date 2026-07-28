@@ -9,7 +9,7 @@ const QuickParts = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1762_4932)">
+      <g clipPath="url(#clip0_1762_4932)">
         <path
           d="M25.7143 6.47998H36L27.1169 29.52H16.8312L25.7143 6.47998Z"
           fill="#F04A4A"
