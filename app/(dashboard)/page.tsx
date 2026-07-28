@@ -1,11 +1,12 @@
 "use client";
 
 import DashboardHeader from "../components/dashboard/DashboardHeader";
-import LiveTracking from "../components/dashboard/LiveTracking";
+
 import ProductCategories from "../components/dashboard/ProductCategories";
 import ProfitSummary from "../components/dashboard/ProfitSummary";
 import ShipmentStatistic from "../components/dashboard/ShipmentStatistic";
 import StatCard from "../components/dashboard/StatCard";
+import Tracking from "../components/dashboard/Tracking";
 
 export default function DashboardPage() {
   return (
@@ -29,7 +30,7 @@ export default function DashboardPage() {
               <ProductCategories />
             </div>
             <div className="col-span-1">
-              <LiveTracking />
+              <Tracking />
             </div>
           </div>
         </div>
