@@ -1,4 +1,4 @@
-export const data = [
+export const shipmentStatData = [
   { month: "Jan", value: 2100 },
   { month: "Feb", value: 2400 },
   { month: "Mar", value: 2200 },

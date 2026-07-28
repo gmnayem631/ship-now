@@ -2,7 +2,6 @@
 
 import DashboardHeader from "../components/dashboard/DashboardHeader";
 import ProfitSummary from "../components/dashboard/ProfitSummary";
-import ShipmentStatChart from "../components/dashboard/ShipmentStatChart";
 import ShipmentStatistic from "../components/dashboard/ShipmentStatistic";
 import StatCard from "../components/dashboard/StatCard";
 
@@ -17,7 +16,7 @@ export default function DashboardPage() {
           <StatCard />
           <div className="grid grid-cols-2 gap-5">
             <div className="col-span-1">
-              <ShipmentStatChart />
+              <ShipmentStatistic />
             </div>
             <div className="col-span-1">
               <ProfitSummary />
