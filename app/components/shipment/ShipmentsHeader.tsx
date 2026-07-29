@@ -1,6 +1,7 @@
 "use client";
 
 import { Search, Filter, ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 const statusTabs = [
   "All",
@@ -28,8 +29,13 @@ const ShipmentsHeader = ({
       {/* Title + Add button */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <p className="text-sm text-gray-500">Dashboard / Shipments</p>
           <h1 className="text-2xl font-bold text-[#333]">Shipments</h1>
+          <p className="text-sm text-gray-500">
+            <Link href={"/"} className="font-bold">
+              Dashboard
+            </Link>{" "}
+            / Shipments
+          </p>
         </div>
 
         <button className="flex h-10 items-center gap-2 rounded-lg bg-[#333] px-4 text-sm font-medium text-white hover:bg-[#222]">
@@ -37,7 +43,7 @@ const ShipmentsHeader = ({
         </button>
       </div>
 
-      {/* Status Tabs + Search + Filter + Sort (same line) */}
+      {/* Status Tabs + Search + Filter + Sort  */}
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         {/* Status Tabs */}
         <nav className="flex items-center gap-1 rounded-xl bg-[#FEFEFE] p-1">
