@@ -9,6 +9,7 @@ import ShipmentCard from "@/app/components/shipment/ShipmentCard";
 const ShipmentsPage = () => {
   const [activeTab, setActiveTab] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [view, setView] = useState<"grid" | "table">("grid");
 
   const filteredShipments = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -36,17 +37,26 @@ const ShipmentsPage = () => {
         setActiveTab={setActiveTab}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        view={view}
+        setView={setView}
       />
 
-      {filteredShipments.length > 0 ? (
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filteredShipments.map((shipment) => (
-            <ShipmentCard key={shipment.id} shipment={shipment} />
-          ))}
-        </div>
+      {view === "grid" ? (
+        filteredShipments.length > 0 ? (
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {filteredShipments.map((shipment) => (
+              <ShipmentCard key={shipment.id} shipment={shipment} />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-xl border border-gray-100 bg-white p-10 text-center text-sm text-gray-500">
+            No shipments match your search or filter.
+          </div>
+        )
       ) : (
+        // Table view will go here
         <div className="rounded-xl border border-gray-100 bg-white p-10 text-center text-sm text-gray-500">
-          No shipments match your search or filter.
+          Table view coming next...
         </div>
       )}
     </div>

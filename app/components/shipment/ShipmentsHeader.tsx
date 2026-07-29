@@ -2,6 +2,7 @@
 
 import { Search, Filter, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import ViewSwitcher from "./ViewSwitcher";
 
 const statusTabs = [
   "All",
@@ -16,6 +17,8 @@ interface ShipmentsHeaderProps {
   setActiveTab: (tab: string) => void;
   searchQuery: string;
   setSearchQuery: (query: string) => void;
+  view: "grid" | "table";
+  setView: (view: "grid" | "table") => void;
 }
 
 const ShipmentsHeader = ({
@@ -23,6 +26,8 @@ const ShipmentsHeader = ({
   setActiveTab,
   searchQuery,
   setSearchQuery,
+  view,
+  setView,
 }: ShipmentsHeaderProps) => {
   return (
     <div className="space-y-5">
@@ -33,14 +38,16 @@ const ShipmentsHeader = ({
           <p className="text-sm text-gray-500">
             <Link href={"/"} className="font-bold">
               Dashboard
-            </Link>{" "}
+            </Link>
             / Shipments
           </p>
         </div>
-
-        <button className="flex h-10 items-center gap-2 rounded-lg bg-[#333] px-4 text-sm font-medium text-white hover:bg-[#222]">
-          + New Shipment
-        </button>
+        <div className="flex items-center gap-3">
+          <ViewSwitcher view={view} onChange={setView} />
+          <button className="flex h-10 items-center gap-2 rounded-lg bg-[#333] px-4 text-sm font-medium text-white hover:bg-[#222]">
+            + New Shipment
+          </button>
+        </div>
       </div>
 
       {/* Status Tabs + Search + Filter + Sort  */}
