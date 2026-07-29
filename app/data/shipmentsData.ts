@@ -12,6 +12,8 @@ export interface Shipment {
   destinationDate: string;
   progress: number;
   carrier: string;
+  weight: number;
+  shippingMethod: "Air" | "Rail" | "Road" | "Ocean";
 }
 
 export const shipments: Shipment[] = [
@@ -26,6 +28,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 21, 2025 - 03:00 PM",
     progress: 60,
     carrier: "FedEx",
+    weight: 1200,
+    shippingMethod: "Air",
   },
   {
     id: "SH9182635",
@@ -38,6 +42,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 20, 2025 - 01:00 PM",
     progress: 75,
     carrier: "DHL",
+    weight: 850,
+    shippingMethod: "Road",
   },
   {
     id: "SH9037821",
@@ -50,6 +56,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 18, 2025 - 05:00 PM",
     progress: 100,
     carrier: "UPS",
+    weight: 1450,
+    shippingMethod: "Ocean",
   },
   {
     id: "SH9374652",
@@ -62,6 +70,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 24, 2025 - 04:00 PM",
     progress: 40,
     carrier: "USPS",
+    weight: 960,
+    shippingMethod: "Rail",
   },
   {
     id: "SH8812349",
@@ -74,6 +84,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 20, 2025 - 03:00 PM",
     progress: 90,
     carrier: "FedEx",
+    weight: 1680,
+    shippingMethod: "Road",
   },
   {
     id: "SH9457830",
@@ -86,6 +98,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 19, 2025 - 06:00 PM",
     progress: 100,
     carrier: "Aramex",
+    weight: 1100,
+    shippingMethod: "Air",
   },
   {
     id: "SH8967432",
@@ -98,6 +112,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 20, 2025 - 11:00 AM",
     progress: 65,
     carrier: "USPS",
+    weight: 1250,
+    shippingMethod: "Road",
   },
   {
     id: "SH8893247",
@@ -110,6 +126,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 21, 2025 - 01:00 PM",
     progress: 80,
     carrier: "DHL",
+    weight: 920,
+    shippingMethod: "Road",
   },
   {
     id: "SH9001873",
@@ -122,6 +140,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 25, 2025 - 05:00 PM",
     progress: 30,
     carrier: "UPS",
+    weight: 1375,
+    shippingMethod: "Rail",
   },
   {
     id: "SH9113471",
@@ -134,6 +154,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 21, 2025 - 03:00 PM",
     progress: 50,
     carrier: "Aramex",
+    weight: 980,
+    shippingMethod: "Road",
   },
   {
     id: "SH8881190",
@@ -146,6 +168,8 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 20, 2025 - 04:00 PM",
     progress: 85,
     carrier: "Local Courier",
+    weight: 1020,
+    shippingMethod: "Air",
   },
   {
     id: "SH776103",
@@ -158,5 +182,7 @@ export const shipments: Shipment[] = [
     destinationDate: "Mar 20, 2025 - 12:00 PM",
     progress: 55,
     carrier: "FedEx",
+    weight: 890,
+    shippingMethod: "Rail",
   },
 ];

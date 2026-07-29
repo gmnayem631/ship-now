@@ -9,7 +9,7 @@ interface ViewSwitcherProps {
 
 const ViewSwitcher = ({ view, onChange }: ViewSwitcherProps) => {
   return (
-    <div className="flex items-center rounded-lg border border-gray-200 bg-white p-1">
+    <div className="flex items-center rounded-lg border border-gray-200 bg-[#FEFEFE] p-1">
       <button
         onClick={() => onChange("grid")}
         className={`flex h-8 w-8 items-center justify-center rounded-md transition ${
