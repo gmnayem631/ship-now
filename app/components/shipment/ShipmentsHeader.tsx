@@ -46,9 +46,12 @@ const ShipmentsHeader = ({
 
         <div className="flex items-center gap-3">
           <ViewSwitcher view={view} onChange={setView} />
-          <button className="flex h-10 items-center gap-2 rounded-lg bg-[#333] px-4 text-sm font-medium text-white hover:bg-[#222]">
+          <Link
+            href={"/shipments/new-shipment"}
+            className="flex h-10 items-center gap-2 rounded-lg bg-[#333] px-4 text-sm font-medium text-white hover:bg-[#222]"
+          >
             + New Shipment
-          </button>
+          </Link>
         </div>
       </div>
       {view === "table" && <ShipmentsMetrics />}
