@@ -3,6 +3,7 @@
 import { Search, Filter, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import ViewSwitcher from "./ViewSwitcher";
+import ShipmentsMetrics from "./ShipmentsMetrics";
 
 const statusTabs = [
   "All",
@@ -42,6 +43,7 @@ const ShipmentsHeader = ({
             / Shipments
           </p>
         </div>
+
         <div className="flex items-center gap-3">
           <ViewSwitcher view={view} onChange={setView} />
           <button className="flex h-10 items-center gap-2 rounded-lg bg-[#333] px-4 text-sm font-medium text-white hover:bg-[#222]">
@@ -49,6 +51,7 @@ const ShipmentsHeader = ({
           </button>
         </div>
       </div>
+      {view === "table" && <ShipmentsMetrics />}
 
       {/* Status Tabs + Search + Filter + Sort  */}
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">

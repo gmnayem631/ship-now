@@ -57,7 +57,9 @@ const ShipmentsPage = () => {
         )
       ) : (
         // Table view
-        <ShipmentsTable data={filteredShipments} />
+        <div>
+          <ShipmentsTable data={filteredShipments} />
+        </div>
       )}
     </div>
   );

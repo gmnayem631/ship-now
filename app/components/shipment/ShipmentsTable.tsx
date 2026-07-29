@@ -8,15 +8,15 @@ interface ShipmentsTableProps {
   data: Shipment[];
 }
 
-const statusStyles: Record<string, string> = {
-  "In Transit": "text-blue-600",
-  "Out for Delivery": "text-orange-600",
-  Delivered: "text-green-600",
-  Processing: "text-yellow-600",
-  Delivery: "text-blue-600",
-  Completed: "text-green-600",
-  Pending: "text-yellow-600",
-};
+// const statusStyles: Record<string, string> = {
+//   "In Transit": "text-blue-600",
+//   "Out for Delivery": "text-orange-600",
+//   Delivered: "text-green-600",
+//   Processing: "text-yellow-600",
+//   Delivery: "text-blue-600",
+//   Completed: "text-green-600",
+//   Pending: "text-yellow-600",
+// };
 
 const statusDotStyles: Record<string, string> = {
   "In Transit": "bg-[#C1B3FF]",
