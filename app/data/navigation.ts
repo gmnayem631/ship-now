@@ -11,10 +11,12 @@ import {
   MessageSquare,
   Bell,
   Settings,
+  LogIn,
 } from "lucide-react";
 
 export const sidebarNavItems = [
   { label: "Dashboard", href: "/", icon: LayoutDashboard },
+  { label: "Login", href: "/login", icon: LogIn },
   { label: "Analytics", href: "/analytics", icon: BarChart3 },
   { label: "Calendar", href: "/calendar", icon: Calendar },
   { label: "Shipments", href: "/shipments", icon: Package },
