@@ -1,5 +1,5 @@
 import WarehouseHeader from "@/app/components/warehouse/WarehouseHeader";
-import { WarehouseInventoryCard } from "@/app/components/warehouse/WarehouseInventoryCard";
+import WarehouseInventory from "@/app/components/warehouse/WarehouseInventory";
 
 export default function WarehouseDashboard() {
   return (
@@ -7,7 +7,7 @@ export default function WarehouseDashboard() {
       {/* Top Header*/}
       <WarehouseHeader />
 
-      <WarehouseInventoryCard />
+      <WarehouseInventory />
     </div>
   );
 }
