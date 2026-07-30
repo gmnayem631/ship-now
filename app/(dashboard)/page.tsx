@@ -6,12 +6,10 @@ import ShipmentStatistic from "../components/dashboard/ShipmentStatistic";
 import ProfitSummary from "../components/dashboard/ProfitSummary";
 import ShipmentType from "../components/dashboard/ShipmentType";
 import ProductCategories from "../components/dashboard/ProductCategories";
-// import LiveTracking from "../components/dashboard/LiveTracking";
 import ShipmentAlerts from "../components/dashboard/ShipmentAlerts";
 import RecentShipments from "../components/dashboard/RecentShipments";
 import Tracking from "../components/dashboard/Tracking";
 import RecentActivity from "../components/dashboard/RecentActivity";
-// import RecentActivity from "../components/dashboard/RecentActivity";
 
 export default function DashboardPage() {
   return (

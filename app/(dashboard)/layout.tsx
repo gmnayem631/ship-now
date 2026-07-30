@@ -4,10 +4,12 @@ import { Footer } from "../components/ui/Footer";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen bg-[#F0F0F0]">
+    <div className="flex min-h-screen w-full flex-col overflow-x-hidden bg-[#FEFEFE] md:flex-row">
       <Sidebar />
       <div className="flex flex-1 flex-col">
-        <main className="flex-1 p-6">{children}</main>
+        <main className="w-full min-w-0 flex-1 overflow-x-hidden p-4 sm:p-6">
+          {children}
+        </main>
         <Footer />
       </div>
     </div>
