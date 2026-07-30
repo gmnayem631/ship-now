@@ -1,28 +1,16 @@
 "use client";
 
+import { mapSections } from "@/app/data/warehouseMapData";
 import React, { useState } from "react";
-
-const mapSections = [
-  { name: "Electronics", slots: ["A1", "A2", "A3"], space: "70/100" },
-  { name: "Home & Kitchen", slots: ["C1", "C2", "C3"], space: "10/100" },
-  { name: "Automotive Parts", slots: ["D1", "D2", "D3"], space: "50/100" },
-  { name: "Sports Equipment", slots: ["F1", "F2", "F3"], space: "40/100" },
-  {
-    name: "Apparel",
-    slots: ["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B9", "B10"],
-    space: "20/100",
-  },
-  { name: "Beauty & Health", slots: ["E1", "E2", "E3", "E4"], space: "30/100" },
-];
 
 export const WarehouseMap: React.FC = () => {
   const [activeFloor, setActiveFloor] = useState("Floor 1");
 
   return (
-    <div className="space-y-4 rounded-xl border border-gray-100 bg-[#FEFEFE] p-5 shadow-sm">
+    <div className="space-y-4 rounded-xl bg-[#FEFEFE] p-4">
       <div className="flex items-center justify-between">
-        <h3 className="font-bold text-[#333333]">Warehouse Map</h3>
-        <div className="flex space-x-1 rounded-lg bg-gray-100 p-1 text-xs">
+        <h3 className="font-semibold text-[#333333]">Warehouse Map</h3>
+        <div className="flex space-x-1 rounded-lg bg-[#F0F0F0] p-1 text-xs">
           {["Floor 1", "Floor 2", "Floor 3"].map((floor) => (
             <button
               key={floor}
@@ -39,17 +27,15 @@ export const WarehouseMap: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 rounded-xl bg-[#F0F0F0] p-4 md:grid-cols-2 lg:grid-cols-4">
         {mapSections.map((sec, i) => (
           <div
             key={i}
-            className={`space-y-2 rounded-xl border border-gray-100 p-3 ${
-              sec.name === "Apparel" ? "md:col-span-2" : ""
+            className={`space-y-2 rounded-xl bg-[#FEFEFE] p-4 ${
+              sec.name === "Apparel" && "md:col-span-3"
             }`}
           >
-            <span className="text-xs font-semibold text-[#333333]">
-              {sec.name}
-            </span>
+            <span className="text-xs font-bold text-[#333333]">{sec.name}</span>
             <div className="flex flex-wrap gap-1.5">
               {sec.slots.map((slot) => (
                 <div

@@ -16,7 +16,7 @@ export const MetricCard: React.FC<MetricCardProps> = ({
 }) => {
   return (
     <div className="flex flex-col justify-between rounded-xl border border-gray-100 bg-[#FEFEFE] p-4 shadow-sm">
-      <span className="text-xs font-semibold tracking-wider text-[#757575] uppercase">
+      <span className="text-xs font-semibold tracking-wider text-[#757575]">
         {title}
       </span>
       <div className="mt-2 flex items-baseline justify-between">
