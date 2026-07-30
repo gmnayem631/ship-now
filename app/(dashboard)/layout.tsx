@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Sidebar from "../components/layouts/Sidebar";
+import { Footer } from "../components/ui/Footer";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
@@ -7,7 +8,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
       <Sidebar />
       <div className="flex flex-1 flex-col">
         <main className="flex-1 p-6">{children}</main>
-        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );

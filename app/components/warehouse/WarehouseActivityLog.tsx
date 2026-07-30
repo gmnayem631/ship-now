@@ -80,11 +80,11 @@ export const WarehouseActivityLog: React.FC = () => {
               <div className="flex items-start space-x-3">
                 {/* Circular Icon Wrapper */}
                 <div
-                  className={`mt-0.5 flex-shrink-0 rounded-full p-2 text-[#FEFEFE] ${
+                  className={`mt-0.5 shrink-0 rounded-full p-2 text-[#FEFEFE] ${
                     item.iconBg === "dark" ? "bg-[#333333]" : "bg-[#856DF3]"
                   }`}
                 >
-                  <IconComponent className="h-3.5 w-3.5 stroke-[2]" />
+                  <IconComponent className="h-3.5 w-3.5 stroke-2" />
                 </div>
 
                 {/* Log Details */}
