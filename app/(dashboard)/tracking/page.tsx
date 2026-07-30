@@ -1,18 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Search,
-  MapPin,
-  Truck,
-  CheckCircle2,
-  Clock,
-  AlertTriangle,
-  Package,
-  Navigation,
-  ChevronRight,
-  Filter,
-} from "lucide-react";
+import { Search, MapPin, Truck, Navigation, ChevronRight } from "lucide-react";
 
 interface ShipmentTracker {
   id: string;

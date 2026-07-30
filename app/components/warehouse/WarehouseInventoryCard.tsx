@@ -125,7 +125,7 @@ export const WarehouseInventoryCard: React.FC = () => {
               tick={({ x, y, payload }) => (
                 <text
                   x={x}
-                  y={y - 120}
+                  y={(y as number) - 120}
                   textAnchor="middle"
                   fill="#757575"
                   className="text-[10px] font-medium"
