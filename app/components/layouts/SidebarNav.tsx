@@ -17,7 +17,7 @@ const SidebarNav = () => {
           <Link
             key={item.label}
             href={item.href}
-            className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+            className={`flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm font-medium transition-colors ${
               isActive
                 ? "bg-[#F0EFFF] text-[#7C3AED]"
                 : "text-[#555] hover:bg-gray-100"
