@@ -1,6 +1,7 @@
 import { CapacityUsageCard } from "@/app/components/warehouse/CapacityUsageCard";
 import { MetricCard } from "@/app/components/warehouse/MetricCard";
 import { PackageStatus } from "@/app/components/warehouse/PackageStatus";
+import { WarehouseActivityLog } from "@/app/components/warehouse/WarehouseActivityLog";
 import WarehouseHeader from "@/app/components/warehouse/WarehouseHeader";
 import WarehouseInventory from "@/app/components/warehouse/WarehouseInventory";
 import { WarehouseMap } from "@/app/components/warehouse/WarehouseMap";
@@ -54,7 +55,7 @@ export default function WarehouseDashboard() {
 
           {/* Add PackageStatus and ActivityLog here once you create their components */}
           <PackageStatus />
-          {/* <ActivityLog /> */}
+          <WarehouseActivityLog />
         </div>
       </div>
     </div>

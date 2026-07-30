@@ -22,4 +22,14 @@ export const packagesData: PackageItem[] = [
     date: "March 22, 2035 – 09:00 AM",
     status: "Expected",
   },
+  {
+    id: "PKG-B03917",
+    date: "March 22, 2035 – 09:00 AM",
+    status: "Expected",
+  },
+  {
+    id: "PKG-N11110",
+    date: "March 22, 2035 – 09:00 AM",
+    status: "Sent",
+  },
 ];
