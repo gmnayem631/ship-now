@@ -1,59 +1,143 @@
-// components/dashboard/ShipmentAlerts.tsx
-import { AlertTriangle } from "lucide-react";
+"use client";
 
-const alerts = [
-  { count: 5, label: "Customs Clearance Delay", color: "bg-[#856DF3]" },
-  { count: 4, label: "Incorrect Address Provided", color: "bg-[#F5B84E]" },
-  { count: 3, label: "Weather-Related Hold", color: "bg-[#2ECC71]" },
+import React from "react";
+import {
+  MoreHorizontal,
+  FileX,
+  MapPin,
+  CloudRain,
+  ArrowUpRight,
+} from "lucide-react";
+
+interface SummaryBox {
+  count: number;
+  label: string;
+}
+
+interface AlertItem {
+  id: string;
+  title: string;
+  trackingId: string;
+  freightType: string;
+  date: string;
+  icon: React.ElementType;
+}
+
+const summaryBoxes: SummaryBox[] = [
+  { count: 5, label: "Customs Clearance Delay" },
+  { count: 4, label: "Incorrect Address Provided" },
+  { count: 3, label: "Weather-Related Hold" },
 ];
 
-const list = [
-  { id: "#SH8743921", label: "Customs Clearance Delay", time: "Mar 21, 2025" },
+const alertItems: AlertItem[] = [
   {
-    id: "#SH8743922",
-    label: "Incorrect Address Provided",
-    time: "Mar 21, 2025",
+    id: "1",
+    title: "Customs Clearance Delay",
+    trackingId: "#SH8743921",
+    freightType: "Ocean Freight",
+    date: "Mar 20",
+    icon: FileX,
   },
-  { id: "#SH8743923", label: "Weather-Related Hold", time: "Mar 21, 2025" },
   {
-    id: "#SH8743924",
-    label: "Incorrect Address Provided",
-    time: "Mar 21, 2025",
+    id: "2",
+    title: "Incorrect Address Provided",
+    trackingId: "#SH8725810",
+    freightType: "Road Freight",
+    date: "Mar 20",
+    icon: MapPin,
+  },
+  {
+    id: "3",
+    title: "Weather-Related Hold",
+    trackingId: "#SH8790043",
+    freightType: "Air Freight",
+    date: "Mar 19",
+    icon: CloudRain,
+  },
+  {
+    id: "4",
+    title: "Incorrect Address Provided",
+    trackingId: "#SH8716654",
+    freightType: "Rail Freight",
+    date: "Mar 18",
+    icon: FileX,
   },
 ];
 
-export default function ShipmentAlerts() {
+export const ShipmentAlerts: React.FC = () => {
   return (
-    <div className="rounded-xl border border-gray-100/50 bg-white p-6 shadow-sm">
+    <div className="space-y-4 rounded-2xl border border-gray-100 bg-[#FEFEFE] p-5 shadow-sm">
+      {/* Header */}
       <div className="flex items-center justify-between">
-        <h3 className="text-base font-semibold text-[#333333]">
-          Shipment Alerts
-        </h3>
-        <span className="flex items-center gap-1 text-xs font-semibold text-red-500">
-          <AlertTriangle className="h-3.5 w-3.5" /> 12 Delays Detected
+        <h3 className="text-sm font-semibold text-[#333]">Shipment Alerts</h3>
+        <button className="rounded-md p-1 text-[#757575] transition-colors hover:bg-gray-100 hover:text-[#333]">
+          <MoreHorizontal className="h-4 w-4" />
+        </button>
+      </div>
+
+      {/* Main Stat */}
+      <div className="flex items-baseline space-x-2">
+        <span className="text-2xl font-bold text-[#333]">12</span>
+        <span className="text-xs font-medium text-[#757575]">
+          Delays Detected
         </span>
       </div>
-      <div className="mt-4 flex gap-2">
-        {alerts.map((a, i) => (
+
+      {/* Top 3 Alert Cards */}
+      <div className="grid grid-cols-3 gap-2">
+        {summaryBoxes.map((box, idx) => (
           <div
-            key={i}
-            className={`flex h-14 w-14 flex-col items-center justify-center rounded-xl ${a.color} text-white`}
+            key={idx}
+            className="flex flex-col items-center justify-center space-y-1 rounded-xl bg-[#E3DDFF]/50 p-3 text-center"
           >
-            <span className="text-lg leading-none font-bold">{a.count}</span>
+            <span className="text-xl font-bold text-[#333]">{box.count}</span>
+            <span className="text-[10px] leading-tight font-medium text-[#333]/80">
+              {box.label}
+            </span>
           </div>
         ))}
       </div>
-      <div className="mt-4 space-y-3">
-        {list.map((item, i) => (
-          <div key={i} className="flex items-center justify-between text-xs">
-            <div>
-              <p className="font-medium text-[#333333]">{item.id}</p>
-              <p className="text-[#856DF3]">{item.label}</p>
+
+      {/* Alert List */}
+      <div className="space-y-3 pt-2">
+        {alertItems.map((item) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={item.id}
+              className="group flex cursor-pointer items-center justify-between"
+            >
+              <div className="flex items-center space-x-3">
+                {/* Icon Container */}
+                <div className="shrink-0 rounded-xl bg-gray-100 p-2.5 text-[#333]">
+                  <Icon className="h-4 w-4 stroke-[2]" />
+                </div>
+
+                {/* Details */}
+                <div>
+                  <h4 className="text-xs font-bold text-[#333]">
+                    {item.title}
+                  </h4>
+                  <p className="mt-0.5 text-[10px] text-[#757575]">
+                    <span className="font-semibold text-[#856DF3]">
+                      {item.trackingId}
+                    </span>
+                    {" · "}
+                    {item.freightType}
+                    {" · "}
+                    {item.date}
+                  </p>
+                </div>
+              </div>
+
+              {/* Arrow Action */}
+              <ArrowUpRight className="h-4 w-4 shrink-0 text-[#757575] transition-colors group-hover:text-[#333]" />
             </div>
-            <span className="text-[#B9B9B9]">{item.time}</span>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
-}
+};
+
+export default ShipmentAlerts;
