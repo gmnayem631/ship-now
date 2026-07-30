@@ -69,7 +69,7 @@ export const ShipmentAlerts: React.FC = () => {
     <div className="space-y-4 rounded-2xl border border-gray-100 bg-[#FEFEFE] p-5 shadow-sm">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-semibold text-[#333]">Shipment Alerts</h3>
+        <h3 className="text-base font-semibold text-[#333]">Shipment Alerts</h3>
         <button className="rounded-md p-1 text-[#757575] transition-colors hover:bg-gray-100 hover:text-[#333]">
           <MoreHorizontal className="h-4 w-4" />
         </button>
@@ -88,10 +88,10 @@ export const ShipmentAlerts: React.FC = () => {
         {summaryBoxes.map((box, idx) => (
           <div
             key={idx}
-            className="flex flex-col items-center justify-center space-y-1 rounded-xl bg-[#E3DDFF]/50 p-3 text-center"
+            className="flex flex-col items-center justify-center space-y-1 rounded-xl bg-[#E3DDFF] p-3 text-center"
           >
-            <span className="text-xl font-bold text-[#333]">{box.count}</span>
-            <span className="text-[10px] leading-tight font-medium text-[#333]/80">
+            <span className="text-2xl font-bold text-[#333]">{box.count}</span>
+            <span className="text-[12px] leading-tight font-medium text-[#333]">
               {box.label}
             </span>
           </div>
@@ -110,12 +110,12 @@ export const ShipmentAlerts: React.FC = () => {
               <div className="flex items-center space-x-3">
                 {/* Icon Container */}
                 <div className="shrink-0 rounded-xl bg-gray-100 p-2.5 text-[#333]">
-                  <Icon className="h-4 w-4 stroke-[2]" />
+                  <Icon className="h-4 w-4 stroke-2" />
                 </div>
 
                 {/* Details */}
                 <div>
-                  <h4 className="text-xs font-bold text-[#333]">
+                  <h4 className="text-sm font-bold text-[#333]">
                     {item.title}
                   </h4>
                   <p className="mt-0.5 text-[10px] text-[#757575]">

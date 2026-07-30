@@ -84,7 +84,7 @@ export const RecentActivity: React.FC = () => {
               {/* Vertical Connecting Line */}
               {!isLast && (
                 <span
-                  className="absolute top-8 bottom-[-20px] left-[15px] w-[1px] bg-gray-200"
+                  className="absolute top-8 -bottom-5 left-3.75 w-px bg-gray-200"
                   aria-hidden="true"
                 />
               )}
@@ -95,15 +95,13 @@ export const RecentActivity: React.FC = () => {
                   item.iconBg === "purple" ? "bg-[#E3DDFF]" : "bg-gray-200/80"
                 }`}
               >
-                <Icon className="h-3.5 w-3.5 stroke-[2]" />
+                <Icon className="h-3.5 w-3.5 stroke-2" />
               </div>
 
               {/* Activity Details */}
-              <div className="space-y-0.5 text-xs">
+              <div className="space-y-0.5 text-sm">
                 <p className="leading-relaxed text-[#333]">
-                  <span className="font-normal text-[#757575]">
-                    {item.role}{" "}
-                  </span>
+                  <span className="font-normal">{item.role} </span>
                   <span className="font-semibold text-[#856DF3]">
                     {item.username}
                   </span>{" "}

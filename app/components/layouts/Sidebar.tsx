@@ -18,9 +18,6 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* -------------------------------------------------------------
-          1. MOBILE TOP NAVIGATION BAR (Visible on < md screens)
-         ------------------------------------------------------------- */}
       <div className="flex items-center justify-between border-b border-gray-100 bg-white px-4 py-3 md:hidden">
         <div className="flex items-center gap-2">
           <ShipNowLogo />
@@ -38,9 +35,6 @@ const Sidebar = () => {
         </button>
       </div>
 
-      {/* -------------------------------------------------------------
-          2. MOBILE DRAWER SLIDEOVER MENU (Visible when toggled on mobile)
-         ------------------------------------------------------------- */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 flex md:hidden">
           {/* Backdrop */}
@@ -81,10 +75,7 @@ const Sidebar = () => {
         </div>
       )}
 
-      {/* -------------------------------------------------------------
-          3. RESPONSIVE SIDEBAR (COLLAPSED ON TABLET, EXPANDED ON DESKTOP)
-         ------------------------------------------------------------- */}
-      <aside className="sticky top-0 hidden h-screen w-16 shrink-0 flex-col border-r border-gray-100 bg-white px-2 py-5 transition-all duration-300 md:flex xl:w-56 xl:px-4">
+      <aside className="hidden h-screen w-16 shrink-0 flex-col border-r border-gray-100 bg-white px-2 py-5 transition-all duration-300 md:fixed md:inset-y-0 md:left-0 md:z-30 md:flex xl:w-56 xl:px-4">
         {/* Logo Section */}
         <div className="flex items-center justify-center gap-2.5 xl:justify-start">
           <ShipNowLogo />
